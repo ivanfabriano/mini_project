@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,3 +11,26 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.mycard { 
+  height: 140px ;
+  width: 300px;
+  border: 1px solid #000; 
+  border-radius: 10px;/* Warna border hitam (ganti dengan warna yang Anda inginkan) */
+  padding: 10px; /* Padding untuk konten dalam card */
+  line-height: 1.1;
+ }
+
+@media print {
+  .mycard {
+   height: 2cm !important;
+   width: 5cm !important;
+   font-size: 11px !important;
+   border-radius: 0px !important;
+   border: 1px solid #000 !important;  /* Warna border hitam (ganti dengan warna yang Anda inginkan) */
+   padding: 5px !important; /* Padding untuk konten dalam card */
+   line-height: 1.1 !important;
+  }
+ }
+
+
